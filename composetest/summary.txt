@@ -1,0 +1,7 @@
+# run: docker-compose up   #( after building Dockerfile and docker-compose.yml)
+# run in background: docker compose up -d
+# find running process: docker compose ps
+# find running services: docker compose run web env  #(name is composetest-web)
+# name will be composetest-web
+#stop: docker compose stop
+#remove volume: docker compose down --volumes

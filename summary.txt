@@ -1,0 +1,9 @@
+create volumn:
+
+create: docker volume create volnew
+mount: docker run -d -p 8000:5000 -v volnew:/Users/rahul/Documents/stat+ML+sql/summary/deployment/docker/project/summary 
+                        trial #(trial is image name)
+
+find: docker volume ls
+inspect: docker volumne inspect volnew
+# go to docker app and go to volumne n manage it                        
