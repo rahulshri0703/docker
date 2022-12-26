@@ -1,0 +1,17 @@
+version: "1"
+services:
+  apper:
+    build: "/Users/rahul/Documents/stat+ML+sql/summary/deployment/docker/project/summary/api"
+    ports:
+      - "8000:80"
+    volumes:
+      - /Users/rahul/Documents/stat+ML+sql/summary/deployment/docker/project/summary/api:/app
+
+  web:
+    build: "/Users/rahul/Documents/stat+ML+sql/summary/deployment/docker/project/summary/composetest"
+    ports:
+      - "9000:5000"
+    volumes:
+      - /Users/rahul/Documents/stat+ML+sql/summary/deployment/docker/project/summary/composetest:/app
+    environment:
+      FLASK_DEBUG: True

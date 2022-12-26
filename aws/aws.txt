@@ -1,0 +1,33 @@
+install efs utils:
+
+for amazon linex: sudo yum install -y amazon-efs-utils
+
+for ubuntu: 
+sudo apt-get update
+sudo apt-get -y install git binutils
+git clone https://github.com/aws/efs-utils
+cd /path/efs-utils  or cd efs-utils
+./build-deb.sh
+sudo apt-get -y install ./build/amazon-efs-utils*deb
+
+for centos:
+sudo yum -y install git
+sudo yum -y install rpm-build
+git clone https://github.com/aws/efs-utils
+cd /path/efs-utils
+sudo yum -y install make
+sudo yum -y install rpm-build
+sudo make rpm
+sudo yum -y install ./build/amazon-efs-utils*rpm
+
+
+# mounting efs using access point:
+
+vim /etc/fstab
+
+edit:
+file-system-id efs-mount-point efs _netdev,tls,accesspoint=access-point-id 0 0
+
+fs-061e9b3bac0d792cc /home/ubuntu/doc efs _netdev,tls,accesspoint=fsap-0a3253d907f4d37df 0 0
+
+# save and close then: mount -fav

@@ -6,3 +6,5 @@ services:
       - "8000:80"
     volumes:
       - .:/app
+
+#name will be api-apper-1

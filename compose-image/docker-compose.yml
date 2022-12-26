@@ -1,0 +1,13 @@
+version: "1"
+services:
+  app:
+    image: rahulshri0703/fast
+    ports:
+      - "8000:80"
+  app2:
+    image: rahulshri0703/doc
+    ports:
+      - "9000:5000"
+
+# access1 = http://0.0.0.0:8000
+# access2 = http://0.0.0.0:9000
