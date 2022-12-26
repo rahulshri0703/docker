@@ -1,0 +1,8 @@
+version: "1"
+services:
+  apper:
+    build: .
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/app
