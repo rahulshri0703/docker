@@ -5,5 +5,12 @@ mount: docker run -d -p 8000:5000 -v volnew:/Users/rahul/Documents/stat+ML+sql/s
                         trial #(trial is image name)
 
 find: docker volume ls
+remove: docker volume rm name
 inspect: docker volumne inspect volnew
-# go to docker app and go to volumne n manage it                        
+# go to docker app and go to volumne n manage it     
+
+# mount volumne to container
+mount: docker run -d -p 8000:5000 -v volnew:/app   #(/app is working dir in container)
+                        trial #(trial is image name)
+# to manage go to : sudo -i
+        cd /var/lib/docker/volumes/volnew/_data                        

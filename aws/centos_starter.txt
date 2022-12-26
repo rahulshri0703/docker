@@ -1,0 +1,38 @@
+# install vim:
+sudo yum install vim
+
+#install python:
+yum update -y
+yum install -y python3
+sudo apt install python3-pip
+
+
+#install docker
+sudo yum install -y yum-utils
+sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+
+sudo yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
+
+sudo systemctl start docker
+sudo docker run hello-world
+
+# install git:
+sudo yum install git -y
+
+# install awscli:
+sudo yum install unzip -y
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+
+/usr/local/bin/aws --version( exit sudo to run aws --version)
+
+# update bash profile:
+
+ ~/.bash_profile
+export PATH=$PATH:/usr/local/bin/aws
+
+#
+ --version

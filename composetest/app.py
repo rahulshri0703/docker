@@ -24,3 +24,4 @@ if __name__ == "__main__":
 
 # default port is 5000
 # to run : docker run -d -p 8000:5000 image_name
+# test: curl localhost:80

@@ -1,0 +1,12 @@
+open ~/.bash_profile
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-11.0.16.1.jdk/Contents/Home
+export SPARK_HOME=/Users/rahul/Documents/HADOOP/spark/spark-3.3.1-bin-hadoop3
+export PATH=$PATH:$SPARK_HOME/bin
+
+
+#docker :
+sudo ln -s ~/Library/Containers/com.docker.docker/Data/docker.raw.sock /var/run/docker.sock
+DOCKER_HOST=unix:///var/run/docker.sock docker ps # test that it works using linked socket file
+
+#temporary: DOCKER_HOST=unix:///Users/$(whoami)/Library/Containers/com.docker.docker/Data/docker.raw.sock docker ps
